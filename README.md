@@ -36,39 +36,62 @@ A simple Contact Management system built with Laravel for the backend and HTML, 
 
 ## Installation & Setup
 
+
 1. **Clone the repo:**
 
 ```bash
 git clone https://github.com/shubhupawar/gadget.git
 cd gadget
-
+```
 
 2. **Install PHP dependencies:**
-   composer install
+
+```bash
+composer install
+```
 
 3. **Copy environment configuration:**
-   cp .env.example .env
+
+```bash
+cp .env.example .env
+```
 
 4. **Update the .env file with your database credentials.**
 
 5. **Generate the application key:**
-   php artisan key:generate
+
+```bash
+php artisan key:generate
+```
 
 6. **Run database migrations:**
-   php artisan migrate
+
+```bash
+php artisan migrate
+```
 
 7. **Publish Sanctum configuration and migrate:**
-   php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-   php artisan migrate
+
+```bash
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan migrate
+```
 
 8. **Start the Laravel development server:**
-   php artisan serve
+
+```bash
+php artisan serve
+```
 
 9. **(Optional) Import Postman collection for API testing:**
-   extras/Gadget.postman_collection.json
+
+`extras/Gadget.postman_collection.json`
 
 10. **(Optional) Import sample database for pre-filled data:**
-    extras/gadget.sql
+
+`extras/gadget.sql`
+
+---
 
 ## API Authentication
 
@@ -85,5 +108,22 @@ This project uses **Laravel Sanctum** to secure API endpoints and provide token-
 - API routes in `routes/api.php` are protected with the `auth:sanctum` middleware.
 - Frontend requests made with jQuery or any HTTP client must include the token for authentication.
 - Token management (issuing, revoking) is handled through Laravel controllers.
+
+---
+
+## System Environment
+
+- OS: Windows
+- Server: WAMP
+- Apache Version: 2.4.59
+- PHP Version: 8.3.6
+
+---
+
+## Additional Notes
+
+- jQuery is used to asynchronously download CSV files.
+- The project UI is responsive and uses Bootstrap 5 for styling.
+- The database schema and seeders are managed via Laravel migrations.
 
 
