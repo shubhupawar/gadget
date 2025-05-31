@@ -15,7 +15,7 @@ A simple Contact Management system built with Laravel for the backend and HTML, 
 
 ## Features
 
-- Add new contacts with name, email, phone, and image
+- Add new contacts with name, email, phone, message and image
 - View a paginated list of all contacts
 - Edit existing contact details with validation
 - Delete contacts
@@ -124,6 +124,6 @@ This project uses **Laravel Sanctum** to secure API endpoints and provide token-
 
 - jQuery is used to asynchronously download CSV files.
 - The project UI is responsive and uses Bootstrap 5 for styling.
-- The database schema and seeders are managed via Laravel migrations.
+- The database schema are managed via Laravel migrations.
 
 
