@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "356e1677-0088-4e0e-8048-7785f85352a3",
+		"name": "Gadgets - Contacts CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29498575"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/gadget/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Logged-in User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/gadget/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contacts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/gadget/api/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/gadget/api/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"1234567890\",\n  \"message\": \"Hello from API\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/gadget/api/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Contact",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Shubhu Pawar\",\n  \"email\": \"shubhu@example.com\",\n  \"phone\": \"7581828400\",\n  \"message\": \"Updated message by shubhu\",\n  \"image\": \"janesmith.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/gadget/api/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|2EcO36j5PpMB1DLynCRqaaKRaCv5S241SIa4nurW1b4abd8c"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/gadget/api/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"gadget",
+						"api",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
