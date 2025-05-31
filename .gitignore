@@ -1,0 +1,11 @@
+/vendor/
+/node_modules/
+.env
+.env.*
+*.log
+*.lock
+/public/storage
+/storage/*.key
+.DS_Store
+Thumbs.db
+.idea/
